@@ -2,7 +2,7 @@
 ロボットシステム学課題
 
 # plusコマンド
-![test](https://github.com/ryuichiueda/robosys2022/actions/workflows/test.yml/badge.svg)
+![test](https://github.com/ryuichiueda/robosys25/actions/workflows/test.yml/badge.svg)
 
 ## 必要なソフトウェア
 - Python 
