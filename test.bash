@@ -11,7 +11,9 @@ res=0
 
 ### NORMAL INPUT ###
 out=$(seq 5 | ./kadai)
-[ "${out}" = 15 ] || ng "$LINENO"
+[ "$?" = 0 ] || ng "$LINENO"
+echo "${out}" | grep -q "15"
+[ "$?" = 0 ] || ng "$LINENO"
 
 ### STRANGE INPUT ###
 out=$(echo あ | ./kadai)
