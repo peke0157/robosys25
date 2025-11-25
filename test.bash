@@ -11,9 +11,31 @@ res=0
 
 ### NORMAL INPUT ###
 out=$(seq 5 | ./kadai)
-[ "$?" = 0 ] || ng "$LINENO"
-echo "${out}" | grep -q "15"
-[ "$?" = 0 ] || ng "$LINENO"
+
+expected = $(cat << EOF
+1 -> 0b1
+1 -> 0o1
+1 -> 0x1
+2 -> 0b10
+2 -> 0o2
+2 -> 0x2
+3 -> 0b11
+3 -> 0o3
+3 -> 0x3
+4 -> 0b100
+4 -> 0o4
+4 -> 0x4
+5 -> 0b101
+5 -> 0o5
+5 -> 0x5
+15
+0b1111
+0o17
+0xf
+EOF
+)
+
+diff < (echo "${out}") < (echo "${expected}") || ng "$LINENO"
 
 ### STRANGE INPUT ###
 out=$(echo あ | ./kadai)
