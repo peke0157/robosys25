@@ -12,7 +12,7 @@ res=0
 ### NORMAL INPUT ###
 out=$(seq 5 | ./kadai)
 
-expected = $(cat << EOF
+expected=$(cat << EOF
 1 -> 0b1
 1 -> 0o1
 1 -> 0x1
