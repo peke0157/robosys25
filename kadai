@@ -1,0 +1,38 @@
+#!/usr/bin/python3
+# SPDX-FileCopyrightText: 2025 Hiroto Miura
+# SPDX-License-Identifier: BSD-3-Clause
+
+import sys
+
+ans = 0
+for line in sys.stdin:
+    # 空白や改行文字を削除
+    clean_line = line.strip()
+
+    # 空行はスキップ
+    if not clean_line:
+        continue
+
+    try:
+        num = int(line)
+
+        
+        # 入力値 -> 2進数
+        print(f'{num} -> {bin(num)}')
+        # 入力値　-> 8進数
+        print(f'{num} -> {oct(num)}')
+        # 入力値-> 16進数
+        print(f'{num} -> {hex(num)}')
+
+        ans += num
+    except ValueError:
+        print(f'{clean_line}', file=sys.stderr)
+
+ # 入力値-> 16進数
+        print(f'{num} -> {hex(num)}')
+
+# 合計とn進数に変換したものを出力
+print(f'{ans}')
+print(f'{bin(ans)}')
+print(f'{oct(ans)}')
+print(f'{hex(ans)}')
