@@ -35,7 +35,7 @@ expected=$(cat << EOF
 EOF
 )
 
-diff < (echo "${out}") < (echo "${expected}") || ng "$LINENO"
+diff <(echo "${out}")<(echo "${expected}") || ng "$LINENO"
 
 ### STRANGE INPUT ###
 out=$(echo あ | ./kadai)
