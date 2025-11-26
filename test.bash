@@ -44,7 +44,7 @@ echo "${out}" | grep -q "0"
 [ "$?" = 0 ] || ng "$LINENO"
 
 out=$(echo  | ./kadai)
-[ "$?" = 0 ] || ng "$LINENO"
+[ "$?" = "" ] || ng "$LINENO"
 echo "${out}" | grep -q "0"
 [ "${out}" = 0 ] || ng "$LINENO"
 
