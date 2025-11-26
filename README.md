@@ -1,15 +1,44 @@
 # robosys25
 ロボットシステム学課題
 
-[![test](https://github.com/peke0157/robosys25/actions/workflows/test.yml/badge.svg)]
+![test](https://github.com/peke0157/robosys25/actions/workflows/test.yml/badge.svg)
 
 ## 課題1のプログラムの内容
 入力したn(10進数)をそれぞれ2進数、8進数、16進数に変換した値を出力し、合計値も同様に出力する。
 
-## クローン方法
-このリポジトリをターミナルで下記のようにクローンしてください。
+## 準備
+- このリポジトリをターミナルで下記のようにクローンしてください。
 ``` 
 $ git clone https://github.com/peke0157/robosys2025.git
+```
+- 下記のディレクトリに移動して、権限を付与する
+```
+$ cd ~/robosys2025/
+
+$ chmod +x kadai
+```
+
+## 使い方
+- 実行方法の例
+```
+$ seq 3 | ./kadai
+```
+
+- 実行結果の例
+```
+1 -> 0b1
+1 -> 0o1
+1 -> 0x1
+2 -> 0b10
+2 -> 0o2
+2 -> 0x2
+3 -> 0b11
+3 -> 0o3
+3 -> 0x3
+6
+0b110
+0o6
+0x6
 ```
 
 ## 必要なソフトウェア
