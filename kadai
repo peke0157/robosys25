@@ -26,7 +26,7 @@ for line in sys.stdin:
 
         ans += num
     except ValueError:
-        print(f'{clean_line}', file=sys.stderr)
+        sys.exit(1)
 
  # 入力値-> 16進数
         print(f'{num} -> {hex(num)}')

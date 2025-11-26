@@ -35,16 +35,18 @@ expected=$(cat << EOF
 EOF
 )
 
-diff <(echo "${out}")<(echo "${expected}") || ng "$LINENO"
+diff <(echo "${out}") <(echo "${expected}") || ng "$LINENO"
 
 ### STRANGE INPUT ###
 out=$(echo あ | ./kadai)
-[ "$?" = 1 ] || ng "$LINENO"
-[ "${out}" = "" ] || ng "$LINENO"
+[ "$?" = 0 ] || ng "$LINENO"
+echo "${out}" | grep -q "0"
+[ "$?" = 0 ] || ng "$LINENO"
 
 out=$(echo  | ./kadai)
-[ "$?" = 1 ] || ng "$LINENO"
-[ "${out}" = "" ] || ng "$LINENO"
+[ "$?" = 0 ] || ng "$LINENO"
+echo "${out}" | grep -q "0"
+[ "${out}" = 0 ] || ng "$LINENO"
 
 [ "${res}" = 0 ] && echo OK
 exit $res
