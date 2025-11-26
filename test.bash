@@ -39,7 +39,7 @@ diff <(echo "${out}") <(echo "${expected}") || ng "$LINENO"
 
 ### STRANGE INPUT ###
 out=$(echo あ | ./kadai)
-[ "$?" = 0 ] || ng "$LINENO"
+[ "$?" = 1 ] || ng "$LINENO"
 echo "${out}" | grep -q "0"
 [ "$?" = 0 ] || ng "$LINENO"
 
