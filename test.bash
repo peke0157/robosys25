@@ -42,11 +42,14 @@ out=$(echo あ | ./kadai)
 [ "$?" = 1 ] || ng "$LINENO"
 echo "${out}" | grep -q "0"
 [ "$?" = 0 ] || ng "$LINENO"
+[ "${out}" = "" ] || ng "$LINENO"
 
 out=$(echo  | ./kadai)
 [ "$?" = "" ] || ng "$LINENO"
 echo "${out}" | grep -q "0"
-[ "${out}" = 0 ] || ng "$LINENO"
+[ "$?" = 0 ] || ng "$LINENO"
+[ "${out}" = "" ] || ng "$LINENO"
+
 
 [ "${res}" = 0 ] && echo OK
 exit $res
