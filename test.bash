@@ -28,10 +28,6 @@ expected=$(cat << EOF
 5 -> 0b101
 5 -> 0o5
 5 -> 0x5
-15
-0b1111
-0o17
-0xf
 EOF
 )
 
