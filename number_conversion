@@ -24,15 +24,8 @@ for line in sys.stdin:
         # 入力値-> 16進数
         print(f'{num} -> {hex(num)}')
 
-        ans += num
     except ValueError:
         sys.exit(1)
 
- # 入力値-> 16進数
-        print(f'{num} -> {hex(num)}')
 
-# 合計とn進数に変換したものを出力
-print(f'{ans}')
-print(f'{bin(ans)}')
-print(f'{oct(ans)}')
-print(f'{hex(ans)}')
+

@@ -4,7 +4,7 @@
 ![test](https://github.com/peke0157/robosys25/actions/workflows/test.yml/badge.svg)
 
 ## 課題1のプログラムの内容
-入力したn(10進数)をそれぞれ2進数、8進数、16進数に変換した値を出力し、合計値も同様に出力する。
+入力したn（10進数）をそれぞれ2進数、8進数、16進数に変換した値を出力し、合計値も同様に出力する。
 
 ## 準備
 - このリポジトリをターミナルで下記のようにクローンしてください。
@@ -67,6 +67,4 @@ $ echo -e "5\n8\n14" | ./kadai
 
 ## ライセンス 
 - このソフトウェアパッケージは，3条項BSDライセンスの下，再頒布および使用が許可されます．．
-- このパッケージのコードは，下記のスライド（CC-BY-SA 4.0 by Ryuichi Ueda）のものを，本人の許可を得て自身の著作としたものです．
-    - [ryuichiueda/my_slides robosys_2025](https://github.com/ryuichiueda/slides_marp/tree/master/robosys2025)
 - © 2025 Hiroto Miura
