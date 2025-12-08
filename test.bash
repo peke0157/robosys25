@@ -10,7 +10,7 @@ ng (){
 res=0
 
 ### NORMAL INPUT ###
-out=$(seq 5 | ./kadai)
+out=$(seq 5 | ./number_conversion)
 
 expected=$(cat << EOF
 1 -> 0b1
@@ -34,10 +34,10 @@ EOF
 diff <(echo "${out}") <(echo "${expected}") || ng "$LINENO"
 
 ### STRANGE INPUT ###
-out=$(echo あ | ./kadai)
+out=$(echo あ | ./number_conversion)
 [ "$?" = 1 ] || ng "$LINENO"
 
-out=$(echo  | ./kadai)
+out=$(echo  | ./conversion)
 [ "$?" = 0 ] || ng "$LINENO"
 echo "${out}" | grep -q "0"
 [ "$?" = 0 ] || ng "$LINENO"
