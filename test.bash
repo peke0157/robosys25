@@ -37,7 +37,7 @@ diff <(echo "${out}") <(echo "${expected}") || ng "$LINENO"
 out=$(echo あ | ./number_conversion)
 [ "$?" = 1 ] || ng "$LINENO"
 
-out=$(echo  | ./conversion)
+out=$(echo  | ./number_conversion)
 [ "$?" = 0 ] || ng "$LINENO"
 echo "${out}" | grep -q "0"
 [ "$?" = 0 ] || ng "$LINENO"
