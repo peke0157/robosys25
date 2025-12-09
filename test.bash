@@ -39,9 +39,7 @@ out=$(echo あ | ./number_conversion)
 
 out=$(echo  | ./number_conversion)
 [ "$?" = 0 ] || ng "$LINENO"
-echo "${out}" | grep -q "0"
-[ "$?" = 0 ] || ng "$LINENO"
-#[ "${out}" = "" ] || ng "$LINENO"
+[ "${out}" = "" ] || ng "$LINENO"
 
 
 [ "${res}" = 0 ] && echo OK
